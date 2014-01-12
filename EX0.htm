@@ -1,0 +1,38 @@
+﻿<html>	<head>		
+<title>test</title>
+<script>
+function $(id)
+{	
+    return document.getElementById(id) || document.all[id];
+}
+window.onload = function()
+{	
+    var bChecked = false;	
+    var oldBtStyle = $("buttonId").style;
+    $("buttonId").onclick = function()
+    {		
+        if(!bChecked)
+        {			
+            this.style.color = "red";
+            this.style.fontSize = 24;
+            this.style.backgroundColor = "yellow";
+            this.style.height = 120;
+            this.style.width = 120;
+            bChecked = true;
+        }else
+        {			
+            this.style.color = "black";
+            this.style.fontSize = 12;
+            this.style.backgroundColor = "silver";
+            this.style.height = 30;
+            this.style.width = 80;
+            bChecked = false;		
+        }	
+      }
+};
+</script>
+</head>
+<body>	
+<input type="button" id="buttonId" value="check me" />
+</body>
+</html>
